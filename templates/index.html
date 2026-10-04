@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        AI Smart Traffic Management System
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div>
+
+        <h1>
+            🚦 AI Smart Traffic Management System
+        </h1>
+
+        <p>
+            Real-Time Traffic Monitoring & Intelligent Signal Control
+        </p>
+
+    </div>
+
+    <div class="status-indicator">
+
+        <span class="live-dot"></span>
+
+        LIVE
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN DASHBOARD
+===================================================== -->
+
+<main class="container">
+
+
+    <!-- =================================================
+         VIDEO SECTION
+    ================================================== -->
+
+    <section class="video-section">
+
+        <div class="section-title">
+
+            <h2>
+                🎥 Live Traffic Camera
+            </h2>
+
+            <span class="camera-status">
+                ● Camera Active
+            </span>
+
+        </div>
+
+
+        <div class="video-container">
+
+            <img
+                src="{{ url_for('video_feed') }}"
+                alt="Live Traffic Video"
+                class="traffic-video"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         STATISTICS
+    ================================================== -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- Vehicle Count -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                🚗
+            </div>
+
+            <div>
+
+                <p>
+                    Vehicle Count
+                </p>
+
+                <h2 id="count">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Traffic Status -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                📊
+            </div>
+
+            <div>
+
+                <p>
+                    Traffic Density
+                </p>
+
+                <h2 id="status">
+                    WAITING
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Green Signal -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                🚦
+            </div>
+
+            <div>
+
+                <p>
+                    Green Signal
+                </p>
+
+                <h2 id="green">
+                    20 sec
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Prediction -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                🤖
+            </div>
+
+            <div>
+
+                <p>
+                    AI Prediction
+                </p>
+
+                <h2 id="prediction">
+                    Monitoring
+                </h2>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         VEHICLE BREAKDOWN
+    ================================================== -->
+
+    <section class="vehicle-section">
+
+        <h2>
+            Vehicle Detection
+        </h2>
+
+
+        <div class="vehicle-grid">
+
+
+            <div class="vehicle-card">
+
+                <span>🚗</span>
+
+                <p>Cars</p>
+
+                <h3 id="cars">
+                    0
+                </h3>
+
+            </div>
+
+
+            <div class="vehicle-card">
+
+                <span>🏍️</span>
+
+                <p>Motorcycles</p>
+
+                <h3 id="motorcycles">
+                    0
+                </h3>
+
+            </div>
+
+
+            <div class="vehicle-card">
+
+                <span>🚌</span>
+
+                <p>Buses</p>
+
+                <h3 id="buses">
+                    0
+                </h3>
+
+            </div>
+
+
+            <div class="vehicle-card">
+
+                <span>🚛</span>
+
+                <p>Trucks</p>
+
+                <h3 id="trucks">
+                    0
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         GRAPH
+    ================================================== -->
+
+    <section class="chart-section">
+
+        <div class="section-title">
+
+            <h2>
+                📈 Live Traffic Density
+            </h2>
+
+        </div>
+
+
+        <div class="chart-container">
+
+            <canvas id="trafficChart"></canvas>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FUTURE AI FEATURES
+    ================================================== -->
+
+    <section class="ai-section">
+
+
+        <div class="ai-card ambulance">
+
+            <div class="ai-icon">
+                🚑
+            </div>
+
+            <div>
+
+                <p>
+                    Ambulance Detection
+                </p>
+
+                <h3 id="ambulance">
+                    Coming Soon
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="ai-card accident">
+
+            <div class="ai-icon">
+                ⚠️
+            </div>
+
+            <div>
+
+                <p>
+                    Accident Detection
+                </p>
+
+                <h3 id="accident">
+                    Coming Soon
+                </h3>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        AI Smart Traffic Management System |
+        BE CSE-AIML Project
+    </p>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+
+</body>
+
+</html>

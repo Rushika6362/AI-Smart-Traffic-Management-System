@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #0b1120;
+
+    color: #ffffff;
+
+    min-height: 100vh;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    background: #111827;
+
+    padding: 20px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #263244;
+
+}
+
+
+.header h1 {
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.header p {
+
+    color: #94a3b8;
+
+}
+
+
+.status-indicator {
+
+    color: #22c55e;
+
+    font-weight: bold;
+
+}
+
+
+.live-dot {
+
+    display: inline-block;
+
+    width: 10px;
+
+    height: 10px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+
+    margin-right: 5px;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+
+    width: 92%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 25px 0;
+
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.video-section {
+
+    background: #111827;
+
+    border: 1px solid #263244;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.section-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: 20px;
+
+}
+
+
+.camera-status {
+
+    color: #22c55e;
+
+    font-size: 14px;
+
+}
+
+
+.video-container {
+
+    width: 100%;
+
+    background: #000;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+}
+
+
+.traffic-video {
+
+    width: 100%;
+
+    max-height: 600px;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   DASHBOARD CARDS
+===================================================== */
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.card {
+
+    background: #111827;
+
+    border: 1px solid #263244;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.card-icon {
+
+    font-size: 35px;
+
+}
+
+
+.card p {
+
+    color: #94a3b8;
+
+    margin-bottom: 8px;
+
+}
+
+
+.card h2 {
+
+    font-size: 28px;
+
+}
+
+
+/* =====================================================
+   VEHICLE SECTION
+===================================================== */
+
+.vehicle-section {
+
+    background: #111827;
+
+    border: 1px solid #263244;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.vehicle-section h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.vehicle-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.vehicle-card {
+
+    background: #0b1120;
+
+    border: 1px solid #263244;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+
+.vehicle-card span {
+
+    font-size: 30px;
+
+}
+
+
+.vehicle-card p {
+
+    color: #94a3b8;
+
+    margin: 10px 0;
+
+}
+
+
+.vehicle-card h3 {
+
+    font-size: 25px;
+
+}
+
+
+/* =====================================================
+   CHART
+===================================================== */
+
+.chart-section {
+
+    background: #111827;
+
+    border: 1px solid #263244;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.chart-container {
+
+    height: 350px;
+
+}
+
+
+/* =====================================================
+   AI FEATURES
+===================================================== */
+
+.ai-section {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.ai-card {
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.ai-icon {
+
+    font-size: 35px;
+
+}
+
+
+.ai-card p {
+
+    margin-bottom: 8px;
+
+}
+
+
+.ambulance {
+
+    background: #064e3b;
+
+    border: 1px solid #10b981;
+
+}
+
+
+.accident {
+
+    background: #450a0a;
+
+    border: 1px solid #ef4444;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #64748b;
+
+    border-top: 1px solid #263244;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .dashboard-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .vehicle-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+
+    }
+
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .vehicle-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .ai-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
